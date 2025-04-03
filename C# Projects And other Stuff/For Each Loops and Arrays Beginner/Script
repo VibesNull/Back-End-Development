@@ -1,0 +1,56 @@
+using System;
+
+namespace MyApp
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            
+          /*  string[] fraudOrderIDs = new string[3];
+            fraudOrderIDs[0] = "A123";
+            fraudOrderIDs[1] = "B113";
+            fraudOrderIDs[2] = "C163";
+            //fraudOrderIDs[3] = "D323";
+
+                ^^ Older Way to establish Arrays 
+         */
+         /*
+            string[] fraudOrderIDs = ["A123","B513","C124"];
+            Console.WriteLine($"First : {fraudOrderIDs[0]}");
+            Console.WriteLine($"Second : {fraudOrderIDs[1]}");
+            Console.WriteLine($"Third : {fraudOrderIDs[2]}");
+
+
+            fraudOrderIDs[0] = "A125";
+            Console.WriteLine($"Reassign Fist : {fraudOrderIDs[0]}");
+
+
+            Console.WriteLine($"There are a total of {fraudOrderIDs.Length} fraudulent orders Currently ");
+        */
+            /*
+            int[] inventory = [200,400,500,700,125,223];
+            int sum = 0;
+            int bin = 0;
+            
+            // Looping Through an array :)
+            foreach(int items in inventory){
+                sum += items;
+                bin++;
+                Console.WriteLine($"Bin {bin} = {items} items (Running Total : {sum})");
+
+            }
+            Console.WriteLine($"The total sum of our inventory is : {sum} With a total of {inventory.Length} Items");
+
+            */
+            string[] arr = ["B123","C234","A345","C15","B177","G3003","C235","B179"];
+            foreach(string item in arr){
+                if(item.StartsWith("B")){
+                    Console.WriteLine($"This Item Starts With a B : {item}");
+                }
+            }
+
+
+        }
+    }
+}
