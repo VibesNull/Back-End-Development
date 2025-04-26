@@ -1,0 +1,35 @@
+using System;
+
+namespace MyApp
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int monsterHealth = 10;
+            int heroHealth = 10;
+
+            Random attackDmg = new Random();
+
+
+            do{
+                int dmg = attackDmg.Next(1,11);
+                monsterHealth = monsterHealth - dmg;
+                
+                Console.WriteLine($"The Hero Attacks ! Doing {dmg} Health to the monster : monster has {monsterHealth} Remaining");
+
+                if(monsterHealth <= 0) continue;
+
+                dmg = attackDmg.Next(1,11);
+                heroHealth = monsterHealth - dmg;
+                
+                Console.WriteLine($"The Monster Attacks ! Doing {dmg} Health to the Hero : Hero has {heroHealth} Remaining");
+
+            }while ((monsterHealth > 0) && (heroHealth > 0));
+
+
+            Console.WriteLine(heroHealth > monsterHealth ? "Hero Wins ! :)": "Monster Wins ! :c");
+
+        }
+     }
+}
