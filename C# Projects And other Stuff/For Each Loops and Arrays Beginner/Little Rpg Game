@@ -21,7 +21,7 @@ namespace MyApp
                 if(monsterHealth <= 0) continue;
 
                 dmg = attackDmg.Next(1,11);
-                heroHealth = monsterHealth - dmg;
+                heroHealth = heroHealth - dmg;
                 
                 Console.WriteLine($"The Monster Attacks ! Doing {dmg} Health to the Hero : Hero has {heroHealth} Remaining");
 
